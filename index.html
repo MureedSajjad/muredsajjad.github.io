@@ -22,9 +22,12 @@
         a {
             color: var(--accent);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
+
         a:hover {
             text-decoration: underline;
+            color: white;
         }
 
         header {
@@ -59,6 +62,12 @@
             padding: 8px 12px;
             border-radius: 4px;
             background-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #30363d;
+            color: white;
         }
 
         section {
@@ -90,6 +99,16 @@
             color: #8b949e;
         }
 
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             header h1 {
@@ -119,12 +138,12 @@
         </nav>
     </header>
 
-    <section>
+    <section class="fade-in">
         <h2>Welcome</h2>
         <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Research Interests</h2>
         <ul>
             <li>Biomedical Data Science</li>
@@ -134,12 +153,12 @@
         </ul>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Academic Goals</h2>
         <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
