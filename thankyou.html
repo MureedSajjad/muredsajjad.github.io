@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
-  <link rel="stylesheet" href="style.css"> <!-- Optional: link to your CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Optional: Add favicon for better appearance -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Improve accessibility and SEO -->
+  <meta name="description" content="Thank you page confirming successful message submission.">
 </head>
 <body>
-  <div class="thank-you">
-    <h1>✅ Thank You!</h1>
+  <main class="thank-you" role="main" aria-label="Thank You Message">
+    <h1 aria-live="polite">✅ Thank You!</h1>
     <p>Your message has been sent successfully.</p>
-    <a href="index.html">← Back to Home</a>
-  </div>
+    <a href="index.html" aria-label="Go back to Home page">← Back to Home</a>
+  </main>
 </body>
 </html>
