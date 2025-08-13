@@ -1,14 +1,43 @@
 [
   {
-    "title": "My First Blog Post",
-    "date": "2025-08-13",
+    "title": "🧬 What Is Precision Medicine — and Why It Matters",
+    "date": "August 13, 2025",
     "tags": ["AI", "Healthcare"],
-    "content": "This post explores how data science can improve rural healthcare systems..."
-  },
-  {
-    "title": "Building My Portfolio",
-    "date": "2025-08-10",
-    "tags": ["Web Dev"],
-    "content": "I used HTML, CSS, and Formspree to build a responsive portfolio site..."
+    "image": "https://via.placeholder.com/800x300.png?text=Precision+Medicine",
+    "sections": [
+      {
+        "heading": "🔍 What Is Precision Medicine?",
+        "content": "Precision medicine (also called personalized medicine) is a medical model that tailors treatment and prevention strategies to the unique characteristics of each patient. It draws on data from genomics, EHRs, lifestyle, and environmental factors to make treatment more accurate and effective."
+      },
+      {
+        "heading": "🧠 Why It Matters",
+        "content": [
+          "Better Outcomes: More effective treatments with fewer side effects",
+          "Early Detection: Predictive models catch diseases before symptoms appear",
+          "Cost Efficiency: Avoids trial-and-error prescriptions",
+          "Empowered Patients: Encourages proactive healthcare"
+        ]
+      },
+      {
+        "heading": "💡 Real‑World Examples",
+        "content": "From targeted cancer therapies to pharmacogenomics and AI-driven diabetes management — precision medicine is already reshaping care."
+      },
+      {
+        "heading": "🧬 The Role of Data Science",
+        "content": "Data science powers this transformation: integrating massive datasets, building predictive models, and visualizing results for clinicians. This is where my passion lies — using data to make healthcare smarter and more accessible."
+      },
+      {
+        "heading": "🌍 Looking Ahead",
+        "content": "In regions like Pakistan, limited access to genomic testing remains a challenge, but the rise of open datasets, wearable tech, and AI tools makes the future promising."
+      },
+      {
+        "heading": "💬 Let’s Talk",
+        "content": "Are you working on healthcare data or AI? Contact me via my contact page or connect on GitHub."
+      }
+    ],
+    "links": {
+      "contact": "contact.html",
+      "github": "https://github.com/MureedSajjad"
+    }
   }
 ]
