@@ -1,0 +1,14 @@
+[
+  {
+    "title": "My First Blog Post",
+    "date": "2025-08-13",
+    "tags": ["AI", "Healthcare"],
+    "content": "This post explores how data science can improve rural healthcare systems..."
+  },
+  {
+    "title": "Building My Portfolio",
+    "date": "2025-08-10",
+    "tags": ["Web Dev"],
+    "content": "I used HTML, CSS, and Formspree to build a responsive portfolio site..."
+  }
+]
