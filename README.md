@@ -1,3 +1,6 @@
+
+**Navigation:** [Home](.) | [About](about)
+
 # Mureed Sajjad
 ## Data Science Student | Biomedical Research Enthusiast
 
