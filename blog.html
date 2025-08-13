@@ -1,94 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: var(--bg-color, #ffffff);
-      color: var(--text-color, #000000);
-      transition: background-color 0.3s, color 0.3s;
-    }
+<article class="blog-post fade-in">
+    <img src="https://via.placeholder.com/800x300.png?text=Precision+Medicine" alt="Precision Medicine" class="blog-image">
+    <h2>🧬 What Is Precision Medicine — and Why It Matters</h2>
+    <p><em>August 13, 2025</em> — AI, Healthcare</p>
 
-    .blog-post {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      background-color: var(--card-bg, #f9f9f9);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+    <h3>🔍 What Is Precision Medicine?</h3>
+    <p>Precision medicine (also called personalized medicine) is a medical model that tailors treatment and prevention strategies to the unique characteristics of each patient. It draws on data from genomics, EHRs, lifestyle, and environmental factors to make treatment more accurate and effective.</p>
 
-    .blog-post h2 {
-      margin-top: 0;
-    }
+    <h3>🧠 Why It Matters</h3>
+    <ul>
+        <li><strong>Better Outcomes:</strong> More effective treatments with fewer side effects</li>
+        <li><strong>Early Detection:</strong> Predictive models catch diseases before symptoms appear</li>
+        <li><strong>Cost Efficiency:</strong> Avoids trial-and-error prescriptions</li>
+        <li><strong>Empowered Patients:</strong> Encourages proactive healthcare</li>
+    </ul>
 
-    .blog-post p {
-      line-height: 1.6;
-    }
+    <h3>💡 Real‑World Examples</h3>
+    <p>From targeted cancer therapies to pharmacogenomics and AI-driven diabetes management — precision medicine is already reshaping care.</p>
 
-    #dark-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #eee;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    <h3>🧬 The Role of Data Science</h3>
+    <p>Data science powers this transformation: integrating massive datasets, building predictive models, and visualizing results for clinicians. This is where my passion lies — using data to make healthcare smarter and more accessible.</p>
 
-    body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #f0f0f0;
-      --card-bg: #1e1e1e;
-    }
-  </style>
-</head>
-<body>
-  <button id="dark-toggle">🌙 Toggle Dark Mode</button>
+    <h3>🌍 Looking Ahead</h3>
+    <p>In regions like Pakistan, limited access to genomic testing remains a challenge, but the rise of open datasets, wearable tech, and AI tools makes the future promising.</p>
 
-  <h1>📝 My Blog</h1>
-  <div id="blog-container">Loading posts...</div>
-
-  <script>
-    // Dark mode toggle
-    const toggle = document.getElementById('dark-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-
-    // Load saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-
-    // Load blog posts from posts.json
-    fetch('posts.json')
-      .then(response => response.json())
-      .then(posts => {
-        const container = document.getElementById('blog-container');
-        container.innerHTML = ''; // Clear "Loading..."
-        posts.forEach(post => {
-          const card = document.createElement('div');
-          card.className = 'blog-post';
-          card.innerHTML = `
-            <h2>${post.title}</h2>
-            <p><em>${post.date}</em> — ${post.tags.join(', ')}</p>
-            <p>${post.content}</p>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(error => {
-        document.getElementById('blog-container').innerHTML = '<p>⚠️ Failed to load posts.</p>';
-        console.error('Error loading posts:', error);
-      });
-  </script>
-</body>
-</html>
+    <h3>💬 Let’s Talk</h3>
+    <p>Are you working on healthcare data or AI? Contact me via my <a href="contact.html">form</a> or connect on <a href="https://github.com/MureedSajjad" target="_blank">GitHub</a>.</p>
+</article>
