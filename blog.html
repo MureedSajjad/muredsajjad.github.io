@@ -1,4 +1,3 @@
-<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,35 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Mureed Sajjad</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg-dark: #0d1117;
+            --bg-light: #161b22;
+            --text-light: #c9d1d9;
+            --accent: #58a6ff;
         }
-        header, footer {
-            background-color: #161b22;
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        header {
+            background-color: var(--bg-light);
             padding: 20px;
             text-align: center;
+            border-bottom: 1px solid #30363d;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: var(--accent);
+        }
+
+        nav {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         nav a {
-            margin: 0 12px;
-            color: #58a6ff;
-            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+
+        nav a:hover {
+            background-color: #30363d;
+            color: white;
+        }
+
         section {
             max-width: 800px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 20px;
-            background-color: #161b22;
+            background-color: var(--bg-light);
             border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
         }
+
         h2 {
-            color: #58a6ff;
+            color: var(--accent);
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 5px;
         }
+
         article {
             margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        article h3 {
+            margin-top: 0;
+            color: #c9d1d9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--bg-light);
+            border-top: 1px solid #30363d;
+            font-size: 0.9em;
+            color: #8b949e;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                margin: 20px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -50,15 +135,25 @@
         </nav>
     </header>
 
-    <section>
+    <section class="fade-in">
+        <h2>Latest Posts</h2>
+
         <article>
-            <h2>Why Biomedical AI Matters</h2>
-            <p>Sharing my thoughts on how machine learning can transform clinical research and healthcare accessibility...</p>
+            <h3>Why Biomedical AI Matters</h3>
+            <p>Machine learning is revolutionizing clinical research. In this post, I explore how data science can improve diagnosis, treatment, and accessibility in healthcare.</p>
+            <p><em>Posted: August 2025</em></p>
         </article>
 
         <article>
-            <h2>My Journey into Data Science</h2>
-            <p>How I cleared 17 exams in one go, and what resilience taught me about learning and growth...</p>
+            <h3>My Journey into Data Science</h3>
+            <p>From clearing 17 exams in one go to building my first portfolio — here’s how resilience and curiosity shaped my academic path.</p>
+            <p><em>Posted: August 2025</em></p>
+        </article>
+
+        <article>
+            <h3>Learning GitHub Pages</h3>
+            <p>How I built this very website using HTML, CSS, and GitHub Pages — and why every student should have a personal site.</p>
+            <p><em>Posted: August 2025</em></p>
         </article>
     </section>
 
