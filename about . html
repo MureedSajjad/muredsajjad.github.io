@@ -5,53 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Mureed Sajjad</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0d1117;
-            color: #c9d1d9;
+        :root {
+            --bg-dark: #0d1117;
+            --bg-light: #161b22;
+            --text-light: #c9d1d9;
+            --accent: #58a6ff;
         }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: white;
+        }
 
         header {
-            background-color: #161b22;
-            padding: 30px 20px;
+            background-color: var(--bg-light);
+            padding: 20px;
             text-align: center;
             border-bottom: 1px solid #30363d;
         }
+
         header h1 {
             margin: 0;
             font-size: 2.2em;
-            color: #58a6ff;
+            color: var(--accent);
         }
+
         header p {
-            margin: 8px 0 0;
+            margin: 8px 0;
             font-size: 1em;
             color: #8b949e;
         }
+
         nav {
             margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
+
         nav a {
-            margin: 0 12px;
             font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #30363d;
+            color: white;
         }
 
         section {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 20px;
-            background-color: #161b22;
+            background-color: var(--bg-light);
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.4);
         }
+
         h2 {
-            color: #58a6ff;
+            color: var(--accent);
             border-bottom: 1px solid #30363d;
             padding-bottom: 5px;
         }
+
         ul {
             list-style-type: square;
             padding-left: 20px;
@@ -60,11 +93,35 @@
         footer {
             text-align: center;
             padding: 15px;
-            background-color: #161b22;
+            background-color: var(--bg-light);
             border-top: 1px solid #30363d;
-            margin-top: 40px;
             font-size: 0.9em;
             color: #8b949e;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                margin: 20px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -76,16 +133,17 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section>
+    <section class="fade-in">
         <h2>Introduction</h2>
         <p>Welcome to my portfolio! I'm a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Research Interests</h2>
         <ul>
             <li>Biomedical Data Science</li>
@@ -95,15 +153,33 @@
         </ul>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Academic Goals</h2>
         <p>I’m pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields. My goal is to contribute to healthcare innovation and improve outcomes through data-driven research.</p>
     </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
+    <section class="fade-in">
+        <h2>Skills</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 200px;">
+                <strong>Python</strong>
+                <div style="background: #30363d; border-radius: 4px;">
+                    <div style="width: 85%; background: #58a6ff; padding: 5px; border-radius: 4px;">85%</div>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <strong>Machine Learning</strong>
+                <div style="background: #30363d; border-radius: 4px;">
+                    <div style="width: 75%; background: #58a6ff; padding: 5px; border-radius: 4px;">75%</div>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <strong>Web Development</strong>
+                <div style="background: #30363d; border-radius: 4px;">
+                    <div style="width: 70%; background: #58a6ff; padding: 5px; border-radius: 4px;">70%</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
