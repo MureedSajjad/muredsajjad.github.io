@@ -4,55 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mureed Sajjad | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #121212;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e293b;
             color: white;
             text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
-        header {
-            padding: 20px;
-            background-color: #1f1f1f;
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        h1 {
-            color: #00ffcc;
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.85;
         }
-        nav a {
-            color: #00ffcc;
-            margin: 0 10px;
-            text-decoration: none;
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
+
         section {
-            padding: 20px;
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
+
+        h2 {
+            color: #0f172a;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 16px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background-color: #1d4ed8;
+        }
+
         footer {
-            background-color: #1f1f1f;
-            padding: 10px;
-            font-size: 14px;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Mureed Sajjad</h1>
         <p>Data Science Student | Biomedical Research Enthusiast</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </header>
 
-    <section>
-        <h2>Welcome to My Portfolio</h2>
-        <p>I’m passionate about Biomedical Data Science, Precision Medicine, and AI for Clinical Research.</p>
-    </section>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I’m a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
+        </section>
+
+        <section>
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Biomedical Data Science</li>
+                <li>Precision Medicine</li>
+                <li>Cancer & Immunity Research</li>
+                <li>ML/AI for Clinical Research</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Academic Goals</h2>
+            <p>Pursuing Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <a href="mailto:mureedsajjad786@gmail.com">Email Me</a>
+            <a href="https://github.com/MureedSajjad" target="_blank">GitHub</a>
+        </section>
+    </main>
 
     <footer>
         &copy; 2025 Mureed Sajjad. All rights reserved.
     </footer>
+
 </body>
 </html>
