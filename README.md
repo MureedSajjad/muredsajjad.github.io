@@ -1,8 +1,7 @@
 
-**Navigation:** [Home](.) | [About](about)
 
 # Mureed Sajjad
-## Data Science Student | Biomedical Research Enthusiast
+## Biomedical Research Scholar — Harnessing Data to Transform Healthcare
 
 Welcome to my portfolio! I'm a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.
 
