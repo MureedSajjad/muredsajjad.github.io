@@ -4,48 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Mureed Sajjad</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0d1117;
-            color: #c9d1d9;
-        }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
 
-        header, footer {
-            background-color: #161b22;
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-light: #161b22;
+            --text-light: #c9d1d9;
+            --accent: #58a6ff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        header {
+            background-color: var(--bg-light);
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #30363d;
         }
+
         header h1 {
             margin: 0;
             font-size: 2.2em;
-            color: #58a6ff;
+            font-weight: 600;
+            color: var(--accent);
         }
+
+        nav {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         nav a {
-            margin: 0 12px;
             font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #30363d;
+            color: white;
         }
 
         section {
-            max-width: 900px;
-            margin: 40px auto;
+            max-width: 1000px;
+            margin: 30px auto;
             padding: 20px;
-            background-color: #161b22;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
         }
+
         h2 {
-            color: #58a6ff;
+            color: var(--accent);
+            font-weight: 600;
             border-bottom: 1px solid #30363d;
             padding-bottom: 5px;
         }
-        .project {
-            margin-bottom: 20px;
+
+        .card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .card img {
+            width: 200px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--bg-light);
+            border-top: 1px solid #30363d;
+            font-size: 0.9em;
+            color: #8b949e;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card img {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -56,29 +148,39 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section>
+    <section class="fade-in">
         <h2>Featured Work</h2>
 
-        <div class="project">
-            <h3>Biomedical Data Analysis with Python</h3>
-            <p>Analyzed clinical datasets using Pandas, NumPy, and Scikit-learn to identify patterns in cancer immunotherapy outcomes.</p>
-            <p><a href="https://github.com/MureedSajjad/biomedical-data-analysis" target="_blank">View on GitHub</a></p>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x120.png?text=Project+1" alt="Project 1">
+            <div class="card-content">
+                <h3>Biomedical Data Analysis</h3>
+                <p>Analyzed clinical datasets using Python to identify patterns in cancer immunotherapy outcomes.</p>
+                <p><a href="https://github.com/MureedSajjad/biomedical-data-analysis" target="_blank">View on GitHub</a></p>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>AI for Disease Prediction</h3>
-            <p>Built a machine learning model to predict diabetes risk using logistic regression and decision trees.</p>
-            <p><a href="https://github.com/MureedSajjad/disease-prediction" target="_blank">View on GitHub</a></p>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x120.png?text=Project+2" alt="Project 2">
+            <div class="card-content">
+                <h3>AI for Disease Prediction</h3>
+                <p>Built a machine learning model to predict diabetes risk using logistic regression and decision trees.</p>
+                <p><a href="https://github.com/MureedSajjad/disease-prediction" target="_blank">View on GitHub</a></p>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>This very site — built with HTML, CSS, and hosted on GitHub Pages to showcase my journey and research interests.</p>
-            <p><a href="https://github.com/MureedSajjad/muredsajjad.github.io" target="_blank">View Repository</a></p>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x120.png?text=Portfolio+Site" alt="Portfolio Site">
+            <div class="card-content">
+                <h3>Portfolio Website</h3>
+                <p>This very site — built with HTML, CSS, and hosted on GitHub Pages to showcase my journey and research interests.</p>
+                <p><a href="https://github.com/MureedSajjad/muredsajjad.github.io" target="_blank">View Repository</a></p>
+            </div>
         </div>
     </section>
 
