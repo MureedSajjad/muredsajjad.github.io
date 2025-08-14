@@ -1,103 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Mureed Sajjad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-        /* Navbar */
-        nav {
-            background-color: #1e1e1e;
-            padding: 15px 0;
-            text-align: center;
-        }
-        nav a {
-            color: #f5f5f5;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ff9800;
-        }
-        /* Content */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.8;
-        }
-        h1, h2 {
-            color: #ff9800;
-            margin-bottom: 10px;
-        }
-        /* Footer */
-        footer {
-            background-color: #1e1e1e;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-        footer a {
-            color: #f5f5f5;
-            margin: 0 10px;
-            font-size: 22px;
-            transition: color 0.3s;
-        }
-        footer a:hover {
-            color: #ff9800;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Mureed Sajjad</title>
+  <meta name="description" content="About Mureed Sajjad — Data Science undergraduate passionate about biomedical AI, precision medicine, and data-driven healthcare." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="favicon.ico"> -->
+
+  <style>
+    /* ============ Theme ============ */
+    :root{
+      --bg: #0f1116;
+      --surface: #151823;
+      --surface-2: #1a1f2e;
+      --text: #eaeff4;
+      --muted: #9aa4b2;
+      --accent: #ff9800;
+      --accent-2: #ffb54d;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 14px;
+      --radius-sm: 10px;
+      --radius-lg: 18px;
+      --trans: 220ms ease;
+      --container: 1100px;
+    }
+
+    /* ============ Base ============ */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(255,152,0,0.08), transparent 60%),
+        radial-gradient(900px 500px at -10% 20%, rgba(255,152,0,0.06), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+    }
+    img{ max-width: 100%; display: block; }
+
+    .container{
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #111;
+      font-weight: 700;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(255,152,0,0.35);
+      transition: transform var(--trans), box-shadow var(--trans), opacity var(--trans);
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,152,0,0.42); }
+    .btn:active{ transform: translateY(0); }
+
+    .btn-outline{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: transparent;
+      transition: background var(--trans), border-color var(--trans), transform var(--trans);
+    }
+    .btn-outline:hover{
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.16);
+      transform: translateY(-2px);
+    }
+
+    .chip{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ============ Navbar ============ */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(15,17,22,0.72);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+    }
+    .brand{
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; letter-spacing: 0.3px;
+    }
+    .brand .dot{
+      width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 14px rgba(255,152,0,0.6);
+    }
+    .nav-links{
+      display: flex; align-items: center; gap: 18px;
+    }
+    .nav-links a{
+      padding: 8px 12px; border-radius: 10px; color: var(--muted); font-weight: 600;
+      transition: color var(--trans), background var(--trans);
+    }
+    .nav-links a:hover{ color: var(--text); background: rgba(255,255,255,0.05); }
+    .nav-links a.active{
+      color: #111; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 6px 16px rgba(255,152,0,0.35);
+    }
+
+    /* ============ Hero ============ */
+    .hero{
+      padding: 70px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .tag{
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(255,152,0,0.12);
+      color: var(--accent-2);
+      font-weight: 700; letter-spacing: 0.4px;
+      border: 1px solid rgba(255,152,0,0.25);
+    }
+    .hero h1{
+      margin: 16px 0 12px;
+      font-size: 42px; line-height: 1.15; letter-spacing: 0.2px;
+    }
+    .hero p.lead{
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 18px;
+    }
+    .hero-cta{ display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+
+    /* ============ Sections ============ */
+    .section{ padding: 28px 0 60px; }
+    .section-head{
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px;
+    }
+    .section-title{
+      display: inline-flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 800;
+    }
+    .section-title .bar{
+      width: 36px; height: 8px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 4px 12px rgba(255,152,0,0.4);
+    }
+    .muted{ color: var(--muted); }
+
+    /* Cards grid */
+    .grid{
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .col-4{ grid-column: span 4; }
+    .col-6{ grid-column: span 6; }
+    .col-8{ grid-column: span 8; }
+    .col-12{ grid-column: span 12; }
+
+    @media (max-width: 900px){
+      .col-4, .col-6, .col-8{ grid-column: span 12; }
+      .hero h1{ font-size: 34px; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, var(--surface), var(--surface-2));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+      border-color: rgba(255,255,255,0.14);
+    }
+    .card h3{
+      margin: 2px 0 8px; font-size: 18px;
+    }
+
+    /* Chips wrap */
+    .chips{ display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* Timeline */
+    .timeline{
+      position: relative; padding-left: 26px;
+    }
+    .timeline::before{
+      content: ""; position: absolute; left: 10px; top: 6px; bottom: 6px; width: 2px; background: rgba(255,255,255,0.12);
+    }
+    .t-item{
+      position: relative; margin-bottom: 16px; padding-left: 8px;
+    }
+    .t-item::before{
+      content: ""; position: absolute; left: -18px; top: 6px; width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 4px rgba(255,152,0,0.15);
+    }
+    .t-meta{ color: var(--muted); font-size: 14px; margin-bottom: 4px; }
+
+    /* Footer */
+    footer{
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+    .footer-inner{
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      padding: 24px 0;
+      flex-wrap: wrap;
+    }
+    .social{
+      display: flex; align-items: center; gap: 14px;
+    }
+    .social a{
+      width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center;
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: transform var(--trans), background var(--trans), border-color var(--trans);
+    }
+    .social a:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.16);
+    }
+
+    /* Animation helpers */
+    .reveal{ opacity: 0; transform: translateY(14px); }
+    .reveal.in{ opacity: 1; transform: translateY(0); transition: 600ms ease; }
+
+    /* Small helpers */
+    .spacer-8{ height: 8px; }
+    .spacer-16{ height: 16px; }
+    .spacer-24{ height: 24px; }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
+  <!-- Skip link -->
+  <a href="#main" class="chip" style="position:absolute;left:-9999px;top:-9999px;">Skip to content</a>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Mureed Sajjad</span>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+        <a class="active" href="about.html" aria-current="page">About</a>
         <a href="research.html">Research</a>
         <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- About Section -->
-    <div class="container">
-        <h1>About Me</h1>
-        <p>
-            Hi, I’m <strong>Mureed Sajjad</strong> — a 6th-semester Data Science undergraduate at the University of Sindh.  
-            I’m passionate about applying computational techniques to biomedicine, precision medicine, and data-driven healthcare.
-        </p>
-
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Biomedical Data Science</li>
-            <li>Precision Medicine</li>
-            <li>Cancer & Immunity Research</li>
-            <li>Machine Learning & AI for Clinical Research</li>
-        </ul>
-
-        <h2>Academic Goals</h2>
-        <p>
-            I aim to pursue a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — 
-            with a vision to improve healthcare outcomes through cutting-edge, data-driven solutions.
-        </p>
+      </nav>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
-        <a href="mailto:mureedsajjad786@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/MureedSajjad" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </footer>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container reveal">
+      <span class="tag"><i class="fa-solid fa-id-badge"></i> About</span>
+      <h1>Data science with a heart for healthcare</h1>
+      <p class="lead">
+        I’m <strong>Mureed Sajjad</strong>, a 6th‑semester Data Science undergraduate at the University of Sindh. I’m focused on biomedical data science, precision medicine, and building data‑driven tools that improve real‑world health outcomes.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="research.html"><i class="fa-solid fa-flask"></i> View research</a>
+        <a class="btn-outline" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
+      </div>
+    </div>
+  </section>
 
+  <main id="main">
+    <!-- Quick facts -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title"><span class="bar"></span> Quick facts</div>
+        </div>
+        <div class="grid">
+          <div class="col-4">
+            <div class="card reveal">
+              <h3><i class="fa-solid fa-user-graduate"></i> Program</h3>
+              <p class="muted">B.S. Data Science, University of Sindh (6th semester)</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card reveal">
+              <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+              <p class="muted">Karachi, Sindh, Pakistan</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card reveal">
+              <h3><i class="fa-solid fa-bolt"></i> Focus</h3>
+              <p class="muted">Biomedical AI, precision medicine, clinical ML</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research interests -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title"><span class="bar"></span> Research interests</div>
+        </div>
+        <div class="card reveal">
+          <div class="chips">
+            <span class="chip"><i class="fa-solid fa-dna"></i> Biomedical Data Science</span>
+            <span class="chip"><i class="fa-solid fa-microscope"></i> Precision Medicine</span>
+            <span class="chip"><i class="fa-solid fa-ribbon"></i> Cancer & Immunity</span>
+            <span class="chip"><i class="fa-solid fa-brain"></i> Machine Learning for Clinics</span>
+            <span class="chip"><i class="fa-solid fa-diagram-project"></i> Multi‑omics Integration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic goals -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title"><span class="bar"></span> Academic goals</div>
+        </div>
+        <div class="grid">
+          <div class="col-8">
+            <div class="card reveal">
+              <h3><i class="fa-solid fa-graduation-cap"></i> Path ahead</h3>
+              <p class="muted">
+                I aim to pursue graduate studies (Master’s and PhD) in Biomedical Data Science or Precision Medicine and contribute to equitable, data‑driven healthcare solutions that are practical, transparent, and clinically meaningful.
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card reveal">
+              <h3><i class="fa-solid fa-trophy"></i> Values</h3>
+              <p class="muted">Impact over hype, reproducibility, accessibility, and human‑centered design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey / timeline -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title"><span class="bar"></span> Journey</div>
+          <span class="muted">Highlights that shaped my direction</span>
+        </div>
+        <div class="card reveal">
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-meta">2025</div>
+              <div><strong>Academic momentum:</strong> Cleared extensive exam backlog and labs in one go, sharpening fundamentals and discipline.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-meta">2024–2025</div>
+              <div><strong>Web + data foundations:</strong> Built responsive portfolio iterations, explored accessibility and animations, and strengthened Python/ML basics.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-meta">Now</div>
+              <div><strong>Biomedical focus:</strong> Prototyping ML pipelines for healthcare data, with an emphasis on evaluation metrics that matter clinically.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="section">
+      <div class="container">
+        <div class="card reveal" style="text-align:center;">
+          <h3 style="margin-bottom:6px;"><i class="fa-solid fa-handshake-angle"></i> Open to research collaborations</h3>
+          <p class="muted">If your work touches clinical ML, multi‑omics, or data for good, I’d love to connect.</p>
+          <div class="spacer-8"></div>
+          <div class="hero-cta" style="justify-content:center;">
+            <a class="btn" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+            <a class="btn-outline" href="research.html"><i class="fa-solid fa-flask"></i> Research</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="muted">© 2025 Mureed Sajjad — All rights reserved</div>
+      <div class="social" aria-label="Social links">
+        <a href="mailto:mureedsajjad786@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/MureedSajjad" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('in');
+      });
+    }, { threshold: 0.08 });
+    els.forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
+```
