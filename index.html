@@ -1,103 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mureed Sajjad - Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mureed Sajjad - Portfolio</title>
+  <style>
+    /* ====== Base ====== */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #121212;   /* Dark background */
+      color: #e0e0e0;              /* Light text */
+      line-height: 1.6;
+    }
+    a { color: #ff9800; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-        /* Navbar */
-        nav {
-            background-color: #ff6600; /* Bright orange */
-            padding: 10px 20px;
-        }
+    /* ====== Navbar ====== */
+    .navbar {
+      background-color: #1e1e1e;
+      padding: 12px 16px;
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;   /* Center the navbar */
+      gap: 18px;
+      padding: 0; margin: 0;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: #ffffff;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color .25s, color .25s;
+    }
+    .nav-link:hover {
+      background-color: #ff9800;
+      color: #121212;
+      text-decoration: none;
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-start;
-        }
+    /* ====== Layout ====== */
+    .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+    h1, h2 { color: #ff9800; margin-top: 0.2rem; }
+    .section { padding: 32px 0; border-bottom: 1px solid #1f1f1f; }
+    .section:last-of-type { border-bottom: none; }
 
-        nav ul li {
-            margin-right: 20px;
-        }
+    /* ====== Connect (social) ====== */
+    .connect {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #1e1e1e;
+      color: #e0e0e0;
+      border: 1px solid #2a2a2a;
+      transition: transform .15s ease, border-color .2s ease;
+      font-weight: 600;
+    }
+    .badge:hover { transform: translateY(-2px); border-color: #ff9800; text-decoration: none; }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-        }
+    /* Simple brand-color accents for the small circle */
+    .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .gh { background:#e0e0e0; }      /* GitHub gray */
+    .li { background:#0a66c2; }      /* LinkedIn blue */
+    .x  { background:#ffffff; }      /* X (white dot on dark) */
+    .gs { background:#34a853; }      /* Scholar-ish green accent */
+    .kg { background:#20beff; }      /* Kaggle cyan */
+    .em { background:#ff9800; }      /* Email orange */
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Content */
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            color: #ff6600;
-        }
-
-        footer {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-    </style>
+    /* ====== Footer ====== */
+    footer {
+      text-align: center;
+      padding: 16px;
+      background-color: #1e1e1e;
+      color: #b0bec5;
+      border-top: 1px solid #2a2a2a;
+      margin-top: 20px;
+    }
+  </style>
 </head>
-<body>
+<body id="top">
 
-    <!-- Navbar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="#top">Home</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#research">Research</a></li>
+      <li><a class="nav-link" href="#goals">Goals</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>Welcome</h1>
-        <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
+  <!-- Main -->
+  <main class="container">
+    <section class="section" id="about">
+      <h1>Welcome</h1>
+      <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
+    </section>
 
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Biomedical Data Science</li>
-            <li>Precision Medicine</li>
-            <li>Cancer & Immunity Research</li>
-            <li>ML/AI for Clinical Research</li>
-        </ul>
+    <section class="section" id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Biomedical Data Science</li>
+        <li>Precision Medicine</li>
+        <li>Cancer &amp; Immunity Research</li>
+        <li>ML/AI for Clinical Research</li>
+      </ul>
+    </section>
 
-        <h2>Academic Goals</h2>
-        <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
+    <section class="section" id="goals">
+      <h2>Academic Goals</h2>
+      <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
+    </section>
 
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
-    </div>
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank" rel="noopener">github.com/MureedSajjad</a></p>
 
-    <footer>
-        © 2025 Mureed Sajjad — All Rights Reserved
-    </footer>
+      <!-- Professional Connect bar -->
+      <div class="connect">
+        <a class="badge" href="https://github.com/MureedSajjad" target="_blank" rel="noopener">
+          <span class="dot gh"></span> GitHub
+        </a>
+        <a class="badge" href="mailto:mureedsajjad786@gmail.com">
+          <span class="dot em"></span> Email
+        </a>
+        <!-- Replace '#' with your real profiles when ready -->
+        <a class="badge" href="#" target="_blank" rel="noopener" title="Add your LinkedIn URL">
+          <span class="dot li"></span> LinkedIn
+        </a>
+        <a class="badge" href="#" target="_blank" rel="noopener" title="Add your X (Twitter) URL">
+          <span class="dot x"></span> X
+        </a>
+        <a class="badge" href="#" target="_blank" rel="noopener" title="Add your Google Scholar URL">
+          <span class="dot gs"></span> Scholar
+        </a>
+        <a class="badge" href="#" target="_blank" rel="noopener" title="Add your Kaggle URL">
+          <span class="dot kg"></span> Kaggle
+        </a>
+      </div>
+      <p style="margin-top:8px; font-size:12px; color:#9aa4a8;">(You can send me your profile links and I’ll plug them in.)</p>
+    </section>
+  </main>
 
+  <footer>
+    <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
+  </footer>
 </body>
 </html>
