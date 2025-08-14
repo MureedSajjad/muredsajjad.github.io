@@ -1,152 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mureed Sajjad - Portfolio</title>
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #121212; /* Dark background */
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
-    a { color: #ff9800; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Mureed Sajjad</h1>
+    <h2>Data Science Student | Biomedical Research Enthusiast</h2>
+    <p class="tagline">Bridging Computational Methods with Precision Medicine</p>
+    
+    <!-- Key Statistics -->
+    <div class="stats">
+        <div class="stat-item">
+            <h3>6th</h3>
+            <p>Semester Data Science Student</p>
+        </div>
+        <div class="stat-item">
+            <h3>4+</h3>
+            <p>Biomedical Projects</p>
+        </div>
+        <div class="stat-item">
+            <h3>3</h3>
+            <p>Research Areas</p>
+        </div>
+    </div>
+</section>
 
-    /* Navbar */
-    .navbar {
-      background-color: #1e1e1e;
-      padding: 12px 16px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #2a2a2a;
-    }
-    .nav-list {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      padding: 0;
-      margin: 0;
-    }
-    .nav-link {
-      color: #ffffff;
-      font-weight: bold;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background-color .25s, color .25s;
-    }
-    .nav-link:hover {
-      background-color: #ff9800;
-      color: #121212;
-    }
+<!-- Research Focus -->
+<section class="research-highlights">
+    <h2>🎯 Research Focus Areas</h2>
+    <div class="research-grid">
+        <div class="research-card">
+            <h3>🧬 Biomedical Data Science</h3>
+            <p>Analyzing clinical and biological datasets to uncover healthcare insights</p>
+        </div>
+        <div class="research-card">
+            <h3>🎯 Precision Medicine</h3>
+            <p>Leveraging patient-specific data for tailored diagnostics and treatments</p>
+        </div>
+        <div class="research-card">
+            <h3>🦠 Cancer & Immunity Research</h3>
+            <p>Supporting early diagnosis and personalized therapies through data</p>
+        </div>
+    </div>
+</section>
 
-    /* Layout */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px;
-    }
-    h1, h2 { color: #ff9800; }
-    .section {
-      padding: 32px 0;
-      border-bottom: 1px solid #1f1f1f;
-    }
-    .section:last-of-type { border-bottom: none; }
-
-    /* Social badges */
-    .connect {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #1e1e1e;
-      color: #e0e0e0;
-      border: 1px solid #2a2a2a;
-      transition: transform .15s ease, border-color .2s ease;
-      font-weight: 600;
-    }
-    .badge:hover { transform: translateY(-2px); border-color: #ff9800; }
-
-    .dot { width: 10px; height: 10px; border-radius: 50%; }
-    .gh { background:#e0e0e0; }
-    .li { background:#0a66c2; }
-    .x  { background:#ffffff; }
-    .gs { background:#34a853; }
-    .kg { background:#20beff; }
-    .em { background:#ff9800; }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 16px;
-      background-color: #1e1e1e;
-      color: #b0bec5;
-      border-top: 1px solid #2a2a2a;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a class="nav-link" href="#about">About</a></li>
-      <li><a class="nav-link" href="#research">Research</a></li>
-      <li><a class="nav-link" href="#goals">Goals</a></li>
-      <li><a class="nav-link" href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main -->
-  <main class="container">
-    <section class="section" id="about">
-      <h1>About Me</h1>
-      <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
-    </section>
-
-    <section class="section" id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Biomedical Data Science</li>
-        <li>Precision Medicine</li>
-        <li>Cancer &amp; Immunity Research</li>
-        <li>ML/AI for Clinical Research</li>
-      </ul>
-    </section>
-
-    <section class="section" id="goals">
-      <h2>Academic Goals</h2>
-      <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
-    </section>
-
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-      <div class="connect">
-        <a class="badge" href="https://github.com/MureedSajjad" target="_blank"><span class="dot gh"></span> GitHub</a>
-        <a class="badge" href="mailto:mureedsajjad786@gmail.com"><span class="dot em"></span> Email</a>
-        <a class="badge" href="#" target="_blank"><span class="dot li"></span> LinkedIn</a>
-        <a class="badge" href="#" target="_blank"><span class="dot x"></span> X</a>
-        <a class="badge" href="#" target="_blank"><span class="dot gs"></span> Scholar</a>
-        <a class="badge" href="#" target="_blank"><span class="dot kg"></span> Kaggle</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
-  </footer>
-
-</body>
-</html>
+<!-- Call to Action -->
+<section class="cta">
+    <h2>Seeking Graduate Research Opportunities</h2>
+    <p>Interested in interdisciplinary collaboration in biomedical data science</p>
+    <div class="cta-buttons">
+        <a href="projects.html" class="btn-primary">View Research Projects</a>
+        <a href="contact.html" class="btn-secondary">Collaborate With Me</a>
+    </div>
+</section>
