@@ -1,115 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mureed Sajjad - Data Science Student | Biomedical Research Enthusiast">
-    <title>Mureed Sajjad - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        /* Navbar styling */
-        header {
-            background-color: #1e1e1e;
-            padding: 1em 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background-color: #181818;
-            padding: 10px;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 15px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            color: #121212;
-            background-color: #ff9800;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #ff9800;
-            border-bottom: 1px solid #ff9800;
-            padding-bottom: 5px;
-        }
-        footer {
-            text-align: center;
-            background-color: #1f1f1f;
-            padding: 15px;
-            color: #b0bec5;
-            border-top: 2px solid #ff9800;
-        }
-        footer a {
-            color: #ff9800;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mureed Sajjad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    nav {
+      background-color: #ffffff;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ff6600; /* Bright professional orange */
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-    
-    <!-- Navbar will be loaded here -->
-    <div id="navbar"></div>
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#research">Research Interests</a></li>
+      <li><a href="#goals">Academic Goals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
-        </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
+  </section>
 
-        <section>
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Biomedical Data Science</li>
-                <li>Precision Medicine</li>
-                <li>Cancer & Immunity Research</li>
-                <li>ML/AI for Clinical Research</li>
-            </ul>
-        </section>
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Biomedical Data Science</li>
+      <li>Precision Medicine</li>
+      <li>Cancer & Immunity Research</li>
+      <li>ML/AI for Clinical Research</li>
+    </ul>
+  </section>
 
-        <section>
-            <h2>Academic Goals</h2>
-            <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
-        </section>
+  <section id="goals">
+    <h2>Academic Goals</h2>
+    <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
+  </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
-        </section>
-    </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
+  </section>
 
-    <footer>
-        <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
-    </footer>
-
-    <!-- Script to load navbar -->
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('navbar').innerHTML = data);
-    </script>
+  <footer>
+    <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
+  </footer>
 </body>
 </html>
