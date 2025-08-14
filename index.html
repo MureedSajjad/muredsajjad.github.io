@@ -3,132 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mureed Sajjad | Portfolio</title>
-
-    <!-- ✅ Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- ✅ Favicon -->
-    <link rel="icon" type="image/png" href="https://via.placeholder.com/32.png?text=MS">
-
+    <meta name="description" content="Mureed Sajjad - Data Science Student | Biomedical Research Enthusiast">
+    <title>Mureed Sajjad - Portfolio</title>
     <style>
-        :root {
-            --bg-dark: #0d1117;
-            --bg-light: #161b22;
-            --text-light: #c9d1d9;
-            --accent: #58a6ff;
-        }
-
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: #121212;
+            color: #e0e0e0;
         }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: white;
-        }
-
         header {
-            background-color: var(--bg-light);
+            background-color: #1f1f1f;
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #30363d;
+            border-bottom: 2px solid #00bcd4;
         }
-
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
-            color: var(--accent);
+            font-size: 2.5rem;
+            color: #00bcd4;
         }
-
         header p {
-            margin: 8px 0;
-            font-size: 1.1em;
-            color: #8b949e;
+            font-size: 1.1rem;
+            color: #b0bec5;
         }
-
         nav {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            background-color: #181818;
+            padding: 10px;
+            text-align: center;
         }
-
         nav a {
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 4px;
-            background-color: transparent;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-
         nav a:hover {
-            background-color: #30363d;
-            color: white;
+            color: #00bcd4;
         }
-
-        section {
+        main {
             max-width: 900px;
             margin: 30px auto;
             padding: 20px;
-            background-color: var(--bg-light);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
         }
-
+        section {
+            margin-bottom: 40px;
+        }
         h2 {
-            color: var(--accent);
-            border-bottom: 1px solid #30363d;
+            color: #00bcd4;
+            border-bottom: 1px solid #00bcd4;
             padding-bottom: 5px;
-            font-weight: 600;
         }
-
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-
         footer {
             text-align: center;
+            background-color: #1f1f1f;
             padding: 15px;
-            background-color: var(--bg-light);
-            border-top: 1px solid #30363d;
-            font-size: 0.9em;
-            color: #8b949e;
+            color: #b0bec5;
+            border-top: 2px solid #00bcd4;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
         }
-
-        .fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            section {
-                margin: 20px;
-                padding: 15px;
-            }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -136,43 +75,46 @@
     <header>
         <h1>Mureed Sajjad</h1>
         <p>Data Science Student | Biomedical Research Enthusiast</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </header>
 
-    <section class="fade-in">
-        <h2>Welcome</h2>
-        <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
-    </section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <section class="fade-in">
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Biomedical Data Science</li>
-            <li>Precision Medicine</li>
-            <li>Cancer & Immunity Research</li>
-            <li>ML/AI for Clinical Research</li>
-        </ul>
-    </section>
+    <main>
+        <section>
+            <h2>Welcome</h2>
+            <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
+        </section>
 
-    <section class="fade-in">
-        <h2>Academic Goals</h2>
-        <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
-    </section>
+        <section>
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Biomedical Data Science</li>
+                <li>Precision Medicine</li>
+                <li>Cancer & Immunity Research</li>
+                <li>ML/AI for Clinical Research</li>
+            </ul>
+        </section>
 
-    <section class="fade-in">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
-    </section>
+        <section>
+            <h2>Academic Goals</h2>
+            <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2025 Mureed Sajjad — All Rights Reserved
+        <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
     </footer>
 </body>
 </html>
