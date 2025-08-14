@@ -3,93 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Mureed Sajjad</title>
+    <title>Projects | Mureed Sajjad</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             background-color: #121212;
             color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #1f1f1f;
-            padding: 15px;
+            background-color: #1e1e1e;
+            padding: 1rem;
             text-align: center;
         }
         header h1 {
             margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            margin-top: 10px;
         }
         nav a {
-            color: #00aaff;
-            margin: 0 10px;
+            color: #00ffcc;
+            margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #ffcc00;
         }
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 30px;
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
         }
-        .project-card {
-            background-color: #1f1f1f;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
-            transition: transform 0.2s ease-in-out;
+        .project {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 10px rgba(0,255,204,0.2);
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .project-card h3 {
-            color: #00aaff;
-        }
-        .project-card p {
-            font-size: 14px;
-            line-height: 1.6;
+        .project h2 {
+            margin-top: 0;
+            color: #00ffcc;
         }
         footer {
+            background-color: #1e1e1e;
             text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            color: #888;
-            background-color: #1f1f1f;
-            margin-top: 20px;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: gray;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Projects</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="projects-container">
-        <div class="project-card">
-            <h3>Heart Disease Prediction</h3>
-            <p>Machine learning model predicting heart disease risk based on patient health records. Built with Python, Pandas, and Scikit-learn.</p>
-        </div>
-        <div class="project-card">
-            <h3>Cancer Genomics Dashboard</h3>
-            <p>Data visualization dashboard for cancer gene expression data using Plotly and Dash.</p>
-        </div>
-        <div class="project-card">
-            <h3>Biomedical NLP Tool</h3>
-            <p>Text mining tool extracting key biomedical terms from research papers using NLP techniques.</p>
-        </div>
-    </section>
+<header>
+    <h1>Projects</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <footer>
-        &copy; 2025 Mureed Sajjad — All Rights Reserved
-    </footer>
+<main>
+    <div class="project">
+        <h2>1. Breast Cancer Prediction Using Machine Learning</h2>
+        <p>Developed a predictive model to classify breast cancer as malignant or benign using Random Forest and Logistic Regression. Achieved 95% accuracy using clinical dataset.</p>
+        <p><strong>Technologies:</strong> Python, Scikit-learn, Pandas, Matplotlib</p>
+    </div>
+
+    <div class="project">
+        <h2>2. Medical Research Dashboard</h2>
+        <p>Built an interactive dashboard for visualizing biomedical datasets, including gene expression data and patient health records.</p>
+        <p><strong>Technologies:</strong> Python, Plotly, Dash, SQL</p>
+    </div>
+
+    <div class="project">
+        <h2>3. COVID-19 Data Analysis</h2>
+        <p>Performed time-series analysis of COVID-19 cases and deaths to study pandemic trends and forecast future spikes.</p>
+        <p><strong>Technologies:</strong> Python, Pandas, Matplotlib, Prophet</p>
+    </div>
+
+    <div class="project">
+        <h2>4. Precision Medicine Research (Ongoing)</h2>
+        <p>Working on integrating patient clinical data and genomics for personalized treatment recommendations.</p>
+        <p><strong>Technologies:</strong> Python, SQL, TensorFlow, Bioinformatics tools</p>
+    </div>
+</main>
+
+<footer>
+    © 2025 Mureed Sajjad — All Rights Reserved
+</footer>
+
 </body>
 </html>
