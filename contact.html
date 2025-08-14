@@ -1,123 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Mureed Sajjad</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+<section id="about" style="padding: 60px 20px; background-color: #f9f9f9; text-align: center; font-family: Arial, sans-serif;">
+    <div style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #222;">About Me</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+            Hello! I’m <strong>Ghulam Sajjad</strong>, a passionate <strong>Data Science student</strong> with a strong interest in 
+            <strong>Biomedical Data Science, AI, and Neuroscience research</strong>. I aim to apply data-driven approaches to 
+            solve real-world problems in healthcare and medicine, with a focus on brain and neural data analysis. 
+            My academic journey blends computational skills with an enthusiasm for interdisciplinary research, 
+            aiming to contribute to innovative discoveries in medical science.
+        </p>
 
-        h1 {
-            margin-top: 30px;
-            color: #00ffcc;
-        }
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-top: 10px;">
+            I am actively involved in learning advanced techniques in machine learning, big data, and neuroinformatics. 
+            My long-term goal is to pursue <strong>graduate research</strong> in <strong>Computational Neuroscience</strong> or related 
+            interdisciplinary fields, contributing to both academic knowledge and practical applications in healthcare.
+        </p>
 
-        form {
-            max-width: 500px;
-            margin: 30px auto;
-            background: #1f1f1f;
-            padding: 20px;
-            border-radius: 10px;
-        }
+        <h3 style="margin-top: 40px; font-size: 2rem; color: #222;">Find Me Online</h3>
+        <p style="color: #555; font-size: 1rem;">You can connect with me or explore my research profiles below:</p>
 
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            text-align: left;
-        }
+        <div style="margin-top: 20px;">
+            <!-- Email -->
+            <a href="mailto:your.email@example.com" target="_blank" style="margin: 0 10px; text-decoration: none; color: #333;">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="40" height="40">
+            </a>
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-            background: #333;
-            color: white;
-            font-size: 1rem;
-        }
+            <!-- GitHub -->
+            <a href="https://github.com/yourusername" target="_blank" style="margin: 0 10px; text-decoration: none; color: #333;">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" width="40" height="40">
+            </a>
 
-        input[type="submit"] {
-            background-color: #00ffcc;
-            color: black;
-            cursor: pointer;
-            font-weight: bold;
-        }
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" style="margin: 0 10px; text-decoration: none; color: #333;">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="40" height="40">
+            </a>
 
-        input[type="submit"]:hover {
-            background-color: #00cca3;
-        }
+            <!-- Google Scholar -->
+            <a href="https://scholar.google.com/citations?user=yourID" target="_blank" style="margin: 0 10px; text-decoration: none; color: #333;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" width="40" height="40">
+            </a>
 
-        .social-links {
-            margin-top: 20px;
-        }
+            <!-- ORCID -->
+            <a href="https://orcid.org/yourORCID" target="_blank" style="margin: 0 10px; text-decoration: none; color: #333;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" width="40" height="40">
+            </a>
 
-        .social-links a {
-            color: #00ffcc;
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        .social-links a:hover {
-            color: #00cca3;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Contact Me</h1>
-    <p>I'd love to hear from you! Fill out the form below.</p>
-
-    <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" placeholder="Your email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-
-        <input type="submit" value="Send Message">
-    </form>
-
-    <div class="social-links">
-        <a href="https://github.com/MureedSajjad" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> |
-        <a href="mailto:your-email@example.com">Email</a>
+            <!-- ResearchGate -->
+            <a href="https://www.researchgate.net/profile/yourname" target="_blank" style="margin: 0 10px; text-decoration: none; color: #333;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" width="40" height="40">
+            </a>
+        </div>
     </div>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const form = event.target;
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = "thankyou.html"; // Redirect to thank you page
-                } else {
-                    alert("Oops! Something went wrong. Please try again.");
-                }
-            }).catch(() => {
-                alert("Error sending message. Please try again later.");
-            });
-        });
-    </script>
-
-</body>
-</html>
+</section>
