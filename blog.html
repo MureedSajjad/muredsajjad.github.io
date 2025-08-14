@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog posts by Mureed Sajjad - Data Science & Biomedical Research">
+  <meta charset="UTF-8" />
   <title>Blog | Mureed Sajjad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog posts by Mureed Sajjad — reflections on data science, healthcare, and innovation" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -15,7 +15,6 @@
       --card-border: #2c2c2c;
       --text-color: #e0e0e0;
       --muted-text: #aaaaaa;
-      --link-color: #00adb5;
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -27,113 +26,172 @@
       color: var(--text-color);
     }
 
-    header {
-      background: var(--card-bg);
-      padding: 1.5rem;
+    /* Navbar */
+    .navbar {
+      background-color: #1e1e1e;
+      padding: 1rem 0;
       text-align: center;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1px solid #2c2c2c;
     }
 
-    header h1 {
+    .navbar ul {
+      list-style: none;
+      padding: 0;
       margin: 0;
-      font-size: 2rem;
+      display: inline-flex;
+      gap: 2rem;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #333;
+      border-radius: 4px;
+    }
+
+    .navbar a.active {
+      background-color: var(--primary-color);
+      color: #000;
+      border-radius: 4px;
+    }
+
+    /* Blog Section */
+    .blog-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .blog-section h2 {
+      font-size: 2.2rem;
       color: var(--primary-color);
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 600;
     }
 
-    nav {
+    .blog-section p.intro {
+      font-size: 1.05rem;
+      color: var(--muted-text);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .blog-post {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .blog-post:hover {
+      box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .blog-post h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: var(--text-color);
+    }
+
+    .blog-post .date {
+      font-size: 0.85rem;
+      color: var(--muted-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--muted-text);
+    }
+
+    .blog-post a {
+      display: inline-block;
       margin-top: 0.5rem;
-    }
-
-    nav a {
-      color: var(--link-color);
-      margin: 0 1rem;
+      color: var(--primary-color);
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover {
+    .blog-post a:hover {
       text-decoration: underline;
     }
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .post {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(255, 102, 0, 0.1);
-      transition: transform 0.2s ease;
-    }
-
-    .post:hover {
-      transform: translateY(-5px);
-    }
-
-    .post h2 {
-      margin-top: 0;
-      color: var(--text-color);
-      font-size: 1.5rem;
-    }
-
-    .post p {
-      color: var(--muted-text);
-      line-height: 1.6;
-    }
-
-    .post em {
-      color: var(--primary-color);
-      font-style: normal;
-      font-weight: 500;
-    }
-
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
+      .blog-section {
+        padding: 2rem 1rem;
       }
 
-      .post {
-        padding: 1.5rem;
+      .blog-section h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>📝 My Blog</h1>
+  <!-- Navbar -->
+  <header class="navbar">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Sample Blog Post -->
-    <div class="post">
-      <h2>Using Machine Learning to Predict Breast Cancer</h2>
-      <p><em>August 14, 2025</em></p>
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <h2>🧠 Reflections & Insights</h2>
+    <p class="intro">
+      Thoughts on data science, healthcare innovation, and the journey of learning. These posts capture my evolving perspective as I explore the intersection of technology and human well-being.
+    </p>
+
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+      <h3>Why Biomedical AI Needs More Empathy</h3>
+      <div class="date">August 2025</div>
       <p>
-        Breast cancer remains one of the most prevalent and life-threatening diseases worldwide. In this post, I explore how machine learning models like Random Forest and Logistic Regression can be used to classify tumors based on clinical features. By training on publicly available datasets, I achieved over 95% accuracy in distinguishing between benign and malignant cases.
+        As we build smarter diagnostic tools, we must also consider the human experience behind the data. Empathy-driven design can bridge the gap between algorithms and patient care.
       </p>
-      <p>
-        The project involved data preprocessing, feature selection, and hyperparameter tuning. Visualizations using Matplotlib helped interpret model performance and feature importance. This work not only demonstrates the power of predictive analytics in healthcare but also highlights the importance of explainability in medical AI.
-      </p>
-      <p>
-        <a href="https://github.com/MureedSajjad/breast-cancer-ml" target="_blank" style="color: var(--link-color); font-weight: 500;">
-          <i class="fab fa-github"></i> View Project on GitHub
-        </a>
-      </p>
+      <a href="blog-post-1.html">Read More</a>
     </div>
-  </main>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+      <h3>Lessons from Building My Portfolio Site</h3>
+      <div class="date">July 2025</div>
+      <p>
+        Designing for clarity, speed, and academic tone taught me more than just HTML/CSS. It reshaped how I communicate my work and values to the world.
+      </p>
+      <a href="blog-post-2.html">Read More</a>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-post">
+      <h3>From Backlogs to Breakthroughs</h3>
+      <div class="date">June 2025</div>
+      <p>
+        Clearing 17 exams in one go wasn’t just a technical feat—it was a lesson in resilience, focus, and the power of believing in your own comeback.
+      </p>
+      <a href="blog-post-3.html">Read More</a>
+    </div>
+
+  </section>
 
 </body>
 </html>
