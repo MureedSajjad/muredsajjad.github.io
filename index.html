@@ -1,51 +1,362 @@
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Mureed Sajjad</h1>
-    <h2>Data Science Student | Biomedical Research Enthusiast</h2>
-    <p class="tagline">Bridging Computational Methods with Precision Medicine</p>
-    
-    <!-- Key Statistics -->
-    <div class="stats">
-        <div class="stat-item">
-            <h3>6th</h3>
-            <p>Semester Data Science Student</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mureed Sajjad | Biomedical Data Science Portfolio</title>
+    <style>
+        /* Keep your existing dark theme styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Navigation styling */
+        nav {
+            background-color: #2d2d2d;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: #FF8C00;
+            color: #1a1a1a;
+        }
+        
+        /* Main content styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #FF8C00, #FFB347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            color: #FF8C00;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            background-color: #2d2d2d;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #FF8C00;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #FF8C00;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            color: #cccccc;
+            font-size: 1rem;
+        }
+        
+        /* Section styling */
+        section {
+            padding: 4rem 0;
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            color: #FF8C00;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .research-card {
+            background-color: #2d2d2d;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #444;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            border-color: #FF8C00;
+        }
+        
+        .research-card h3 {
+            color: #FF8C00;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .research-card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background-color: #2d2d2d;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta h2 {
+            color: #FF8C00;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #FF8C00;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+        
+        .btn-primary:hover {
+            background-color: #FFB347;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #FF8C00;
+            border: 2px solid #FF8C00;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #FF8C00;
+            color: #1a1a1a;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2d2d2d;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #444;
+        }
+        
+        footer p {
+            color: #cccccc;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </div>
-        <div class="stat-item">
-            <h3>4+</h3>
-            <p>Biomedical Projects</p>
-        </div>
-        <div class="stat-item">
-            <h3>3</h3>
-            <p>Research Areas</p>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Research Focus -->
-<section class="research-highlights">
-    <h2>🎯 Research Focus Areas</h2>
-    <div class="research-grid">
-        <div class="research-card">
-            <h3>🧬 Biomedical Data Science</h3>
-            <p>Analyzing clinical and biological datasets to uncover healthcare insights</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Mureed Sajjad</h1>
+            <h2>Data Science Student | Biomedical Research Enthusiast</h2>
+            <p class="tagline">Bridging Computational Methods with Precision Medicine</p>
+            
+            <!-- Key Statistics -->
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>6th</h3>
+                    <p>Semester Data Science Student</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>Biomedical Research Areas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8+</h3>
+                    <p>Target Countries for PhD</p>
+                </div>
+            </div>
         </div>
-        <div class="research-card">
-            <h3>🎯 Precision Medicine</h3>
-            <p>Leveraging patient-specific data for tailored diagnostics and treatments</p>
-        </div>
-        <div class="research-card">
-            <h3>🦠 Cancer & Immunity Research</h3>
-            <p>Supporting early diagnosis and personalized therapies through data</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Call to Action -->
-<section class="cta">
-    <h2>Seeking Graduate Research Opportunities</h2>
-    <p>Interested in interdisciplinary collaboration in biomedical data science</p>
-    <div class="cta-buttons">
-        <a href="projects.html" class="btn-primary">View Research Projects</a>
-        <a href="contact.html" class="btn-secondary">Collaborate With Me</a>
-    </div>
-</section>
+    <!-- Research Focus -->
+    <section class="research-highlights">
+        <div class="container">
+            <h2>🎯 Research Focus Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>🧬 Biomedical Data Science</h3>
+                    <p>Analyzing clinical and biological datasets to uncover healthcare insights and support evidence-based medical decisions.</p>
+                </div>
+                <div class="research-card">
+                    <h3>🎯 Precision Medicine</h3>
+                    <p>Leveraging patient-specific data for tailored diagnostics and personalized treatment strategies.</p>
+                </div>
+                <div class="research-card">
+                    <h3>🦠 Cancer & Immunity Research</h3>
+                    <p>Supporting early diagnosis and personalized therapies through computational analysis of molecular data.</p>
+                </div>
+                <div class="research-card">
+                    <h3>🤖 ML/AI for Clinical Research</h3>
+                    <p>Developing interpretable machine learning models to aid healthcare decision-making and improve patient outcomes.</p>
+                </div>
+                <div class="research-card">
+                    <h3>💊 Precision Health</h3>
+                    <p>Applying computational tools to support predictive, preventive, and participatory medicine approaches.</p>
+                </div>
+                <div class="research-card">
+                    <h3>📊 Healthcare Analytics</h3>
+                    <p>Using big data analytics to improve healthcare delivery and population health outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Vision -->
+    <section>
+        <div class="container">
+            <h2>🎓 Academic Vision</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>🚀 Graduate Studies Goal</h3>
+                    <p>Pursuing fully funded Master's and PhD programs in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields.</p>
+                </div>
+                <div class="research-card">
+                    <h3>🌍 Global Research Ambition</h3>
+                    <p>Seeking opportunities in leading universities across Singapore, Europe, Australia, Malaysia, China, Taiwan, USA, and Gulf Countries.</p>
+                </div>
+                <div class="research-card">
+                    <h3>📝 Publication Goals</h3>
+                    <p>Aiming to publish 6-7 high-impact research papers in biomedical data science and precision medicine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Seeking Graduate Research Opportunities</h2>
+            <p>Interested in interdisciplinary collaboration in biomedical data science and precision medicine research</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn-primary">View Research Projects</a>
+                <a href="contact.html" class="btn-secondary">Collaborate With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mureed Sajjad — All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
