@@ -1,111 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mureed Sajjad - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212; /* Dark background */
-      color: #e0e0e0; /* Light text */
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mureed Sajjad - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
 
-    nav {
-      background-color: #1e1e1e;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav ul li {
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #ff9800; /* Bright professional orange */
-    }
+        /* Navbar */
+        nav {
+            background-color: #ff6600; /* Bright orange */
+            padding: 10px 20px;
+        }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      color: #ff9800;
-      border-bottom: 1px solid #ff9800;
-      padding-bottom: 5px;
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #ff9800;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+        }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      color: #b0bec5;
-      margin-top: 2rem;
-    }
-  </style>
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #ff6600;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#research">Research Interests</a></li>
-      <li><a href="#goals">Academic Goals</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
-  </section>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-  <section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Biomedical Data Science</li>
-      <li>Precision Medicine</li>
-      <li>Cancer & Immunity Research</li>
-      <li>ML/AI for Clinical Research</li>
-    </ul>
-  </section>
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Hi, I’m Mureed — a 6th-semester Data Science undergraduate at University of Sindh, passionate about applying computational techniques to biomedicine and precision medicine.</p>
 
-  <section id="goals">
-    <h2>Academic Goals</h2>
-    <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
-  </section>
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Biomedical Data Science</li>
+            <li>Precision Medicine</li>
+            <li>Cancer & Immunity Research</li>
+            <li>ML/AI for Clinical Research</li>
+        </ul>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
-  </section>
+        <h2>Academic Goals</h2>
+        <p>Pursuing a Master’s and PhD in Biomedical Data Science, Precision Medicine, or related interdisciplinary fields — with a vision to improve healthcare outcomes through data-driven solutions.</p>
 
-  <footer>
-    <p>© 2025 Mureed Sajjad — All Rights Reserved</p>
-  </footer>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mureedsajjad786@gmail.com">mureedsajjad786@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/MureedSajjad" target="_blank">github.com/MureedSajjad</a></p>
+    </div>
+
+    <footer>
+        © 2025 Mureed Sajjad — All Rights Reserved
+    </footer>
+
 </body>
 </html>
