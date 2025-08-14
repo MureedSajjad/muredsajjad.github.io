@@ -5,46 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Blog posts by Mureed Sajjad - Data Science & Biomedical Research">
   <title>Blog | Mureed Sajjad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
+    :root {
+      --primary-color: #ff6600;
+      --background-color: #121212;
+      --card-bg: #1e1e1e;
+      --card-border: #2c2c2c;
+      --text-color: #e0e0e0;
+      --muted-text: #aaaaaa;
+      --link-color: #00adb5;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #121212;
-      color: #fff;
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
     }
+
     header {
-      background: #1e1e1e;
-      padding: 1rem;
+      background: var(--card-bg);
+      padding: 1.5rem;
       text-align: center;
+      border-bottom: 1px solid var(--card-border);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
     nav a {
-      color: #00adb5;
+      color: var(--link-color);
       margin: 0 1rem;
       text-decoration: none;
+      font-weight: 500;
     }
-    h1 {
-      margin-top: 1rem;
+
+    nav a:hover {
+      text-decoration: underline;
     }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
     .post {
-      background: #1e1e1e;
-      margin: 1rem auto;
-      padding: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 8px;
-      width: 80%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(255, 102, 0, 0.1);
+      transition: transform 0.2s ease;
     }
+
+    .post:hover {
+      transform: translateY(-5px);
+    }
+
     .post h2 {
       margin-top: 0;
+      color: var(--text-color);
+      font-size: 1.5rem;
     }
+
     .post p {
-      color: #ccc;
+      color: var(--muted-text);
+      line-height: 1.6;
+    }
+
+    .post em {
+      color: var(--primary-color);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .post {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>My Blog</h1>
+    <h1>📝 My Blog</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -54,29 +116,24 @@
     </nav>
   </header>
 
-  <main id="blog-posts"></main>
+  <main>
+    <!-- Sample Blog Post -->
+    <div class="post">
+      <h2>Using Machine Learning to Predict Breast Cancer</h2>
+      <p><em>August 14, 2025</em></p>
+      <p>
+        Breast cancer remains one of the most prevalent and life-threatening diseases worldwide. In this post, I explore how machine learning models like Random Forest and Logistic Regression can be used to classify tumors based on clinical features. By training on publicly available datasets, I achieved over 95% accuracy in distinguishing between benign and malignant cases.
+      </p>
+      <p>
+        The project involved data preprocessing, feature selection, and hyperparameter tuning. Visualizations using Matplotlib helped interpret model performance and feature importance. This work not only demonstrates the power of predictive analytics in healthcare but also highlights the importance of explainability in medical AI.
+      </p>
+      <p>
+        <a href="https://github.com/MureedSajjad/breast-cancer-ml" target="_blank" style="color: var(--link-color); font-weight: 500;">
+          <i class="fab fa-github"></i> View Project on GitHub
+        </a>
+      </p>
+    </div>
+  </main>
 
-  <script>
-    fetch('posts.json')
-      .then(response => response.json())
-      .then(posts => {
-        const container = document.getElementById('blog-posts');
-        posts.forEach(post => {
-          const postEl = document.createElement('div');
-          postEl.classList.add('post');
-          postEl.innerHTML = `
-            <h2>${post.title}</h2>
-            <p><em>${post.date}</em></p>
-            <p>${post.summary}</p>
-            <a href="${post.link}" style="color:#00adb5">Read more</a>
-          `;
-          container.appendChild(postEl);
-        });
-      })
-      .catch(err => {
-        document.getElementById('blog-posts').innerHTML = "<p>Failed to load blog posts.</p>";
-        console.error(err);
-      });
-  </script>
 </body>
 </html>
