@@ -3,141 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Mureed Sajjad</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+    <title>Projects - Mureed Sajjad</title>
     <style>
-        :root {
-            --bg-dark: #0d1117;
-            --bg-light: #161b22;
-            --text-light: #c9d1d9;
-            --accent: #58a6ff;
-        }
-
         body {
-            margin: 0;
-            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            background-color: #121212;
             color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-
         header {
-            background-color: var(--bg-light);
-            padding: 20px;
+            background-color: #1f1f1f;
+            padding: 15px;
             text-align: center;
-            border-bottom: 1px solid #30363d;
         }
-
         header h1 {
             margin: 0;
-            font-size: 2.2em;
-            font-weight: 600;
-            color: var(--accent);
         }
-
-        nav {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
         nav a {
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 4px;
-            background-color: transparent;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            color: #00aaff;
+            margin: 0 10px;
+            text-decoration: none;
         }
-
         nav a:hover {
-            background-color: #30363d;
-            color: white;
+            text-decoration: underline;
         }
-
-        section {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-
-        h2 {
-            color: var(--accent);
-            font-weight: 600;
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 5px;
-        }
-
-        .card {
-            background-color: var(--bg-light);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
-            padding: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-wrap: wrap;
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            align-items: center;
+            padding: 30px;
         }
-
-        .card img {
-            width: 200px;
-            height: auto;
-            border-radius: 6px;
+        .project-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+            transition: transform 0.2s ease-in-out;
         }
-
-        .card-content {
-            flex: 1;
-            min-width: 250px;
+        .project-card:hover {
+            transform: translateY(-5px);
         }
-
+        .project-card h3 {
+            color: #00aaff;
+        }
+        .project-card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
         footer {
             text-align: center;
             padding: 15px;
-            background-color: var(--bg-light);
-            border-top: 1px solid #30363d;
-            font-size: 0.9em;
-            color: #8b949e;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.6em;
-            }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            .card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .card img {
-                width: 100%;
-            }
+            font-size: 14px;
+            color: #888;
+            background-color: #1f1f1f;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -153,34 +73,18 @@
         </nav>
     </header>
 
-    <section class="fade-in">
-        <h2>Featured Work</h2>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200x120.png?text=Project+1" alt="Project 1">
-            <div class="card-content">
-                <h3>Biomedical Data Analysis</h3>
-                <p>Analyzed clinical datasets using Python to identify patterns in cancer immunotherapy outcomes.</p>
-                <p><a href="https://github.com/MureedSajjad/biomedical-data-analysis" target="_blank">View on GitHub</a></p>
-            </div>
+    <section class="projects-container">
+        <div class="project-card">
+            <h3>Heart Disease Prediction</h3>
+            <p>Machine learning model predicting heart disease risk based on patient health records. Built with Python, Pandas, and Scikit-learn.</p>
         </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200x120.png?text=Project+2" alt="Project 2">
-            <div class="card-content">
-                <h3>AI for Disease Prediction</h3>
-                <p>Built a machine learning model to predict diabetes risk using logistic regression and decision trees.</p>
-                <p><a href="https://github.com/MureedSajjad/disease-prediction" target="_blank">View on GitHub</a></p>
-            </div>
+        <div class="project-card">
+            <h3>Cancer Genomics Dashboard</h3>
+            <p>Data visualization dashboard for cancer gene expression data using Plotly and Dash.</p>
         </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200x120.png?text=Portfolio+Site" alt="Portfolio Site">
-            <div class="card-content">
-                <h3>Portfolio Website</h3>
-                <p>This very site — built with HTML, CSS, and hosted on GitHub Pages to showcase my journey and research interests.</p>
-                <p><a href="https://github.com/MureedSajjad/muredsajjad.github.io" target="_blank">View Repository</a></p>
-            </div>
+        <div class="project-card">
+            <h3>Biomedical NLP Tool</h3>
+            <p>Text mining tool extracting key biomedical terms from research papers using NLP techniques.</p>
         </div>
     </section>
 
