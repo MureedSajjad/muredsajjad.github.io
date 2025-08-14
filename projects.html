@@ -1,58 +1,153 @@
-<section id="projects" class="projects-section">
-  <h2>📁 Projects</h2>
-  <p>
-    Here are selected projects that reflect my passion for biomedical data science, predictive modeling, and healthcare innovation. Each project showcases my ability to apply machine learning, data visualization, and thoughtful design to real-world challenges.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Mureed Sajjad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <div class="projects-grid">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <h3>🔬 Breast Cancer Prediction Using ML</h3>
-      <p>
-        Developed a diagnostic model using Random Forest and Logistic Regression to classify tumors as benign or malignant. Achieved 95% accuracy on clinical datasets through feature selection and hyperparameter tuning.
-      </p>
-      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Matplotlib</p>
-      <a href="https://github.com/MureedSajjad/breast-cancer-ml" target="_blank">
-        <i class="fab fa-github"></i> View Code
-      </a>
+    .projects-section {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .projects-section h2 {
+      font-size: 2rem;
+      color: #ff6600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .projects-section p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .project-card p {
+      margin: 0.5rem 0;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #ff6600;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .projects-section {
+        padding: 1rem;
+      }
+
+      .projects-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="projects" class="projects-section">
+    <h2>📁 Projects</h2>
+    <p>
+      Here are selected projects that reflect my passion for biomedical data science, predictive modeling, and healthcare innovation. Each project showcases my ability to apply machine learning, data visualization, and thoughtful design to real-world challenges.
+    </p>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>🔬 Breast Cancer Prediction Using ML</h3>
+        <p>
+          Developed a diagnostic model using Random Forest and Logistic Regression to classify tumors as benign or malignant. Achieved 95% accuracy on clinical datasets through feature selection and hyperparameter tuning.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Matplotlib</p>
+        <a href="https://github.com/MureedSajjad/breast-cancer-ml" target="_blank">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>📊 Diabetes Prediction Dashboard</h3>
+        <p>
+          Built an interactive dashboard to visualize diabetes risk factors using Plotly and Dash. Integrated real-time filtering and dynamic charts to support clinical decision-making.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Dash, Plotly, NumPy</p>
+        <a href="https://github.com/MureedSajjad/diabetes-dashboard" target="_blank">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>🧬 Gene Expression Analysis</h3>
+        <p>
+          Conducted exploratory data analysis on gene expression datasets to identify biomarkers for disease classification. Applied PCA and clustering techniques to uncover patterns in high-dimensional data.
+        </p>
+        <p><strong>Tech Stack:</strong> Python, Seaborn, Scikit-learn, BioPython</p>
+        <a href="https://github.com/MureedSajjad/gene-expression-analysis" target="_blank">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>
+          Designed and developed a responsive multi-page portfolio to showcase academic achievements, technical projects, and research interests. Focused on clean layout, accessibility, and fast performance.
+        </p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+        <a href="https://github.com/MureedSajjad/portfolio-site" target="_blank">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <h3>📊 Diabetes Prediction Dashboard</h3>
-      <p>
-        Built an interactive dashboard to visualize diabetes risk factors using Plotly and Dash. Integrated real-time filtering and dynamic charts to support clinical decision-making.
-      </p>
-      <p><strong>Tech Stack:</strong> Python, Dash, Plotly, NumPy</p>
-      <a href="https://github.com/MureedSajjad/diabetes-dashboard" target="_blank">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <h3>🧬 Gene Expression Analysis</h3>
-      <p>
-        Conducted exploratory data analysis on gene expression datasets to identify biomarkers for disease classification. Applied PCA and clustering techniques to uncover patterns in high-dimensional data.
-      </p>
-      <p><strong>Tech Stack:</strong> Python, Seaborn, Scikit-learn, BioPython</p>
-      <a href="https://github.com/MureedSajjad/gene-expression-analysis" target="_blank">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card">
-      <h3>🌐 Portfolio Website</h3>
-      <p>
-        Designed and developed a responsive multi-page portfolio to showcase academic achievements, technical projects, and research interests. Focused on clean layout, accessibility, and fast performance.
-      </p>
-      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-      <a href="https://github.com/MureedSajjad/portfolio-site" target="_blank">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-
-  </div>
-</section>
+</body>
+</html>
